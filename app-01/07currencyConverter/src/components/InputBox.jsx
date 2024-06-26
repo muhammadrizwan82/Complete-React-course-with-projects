@@ -7,12 +7,15 @@ function InputBox({
     onAmountChange,
     onCurrencyChange,
     currencyOptions = [],
-    selectedCurrency = "usd",
+    selectedCurrency = "USD",
     amountDisable = false,
     currencyDisable = false,
     className = ""
 }) {
     const amountInputId = useId()
+
+    console.log(label, selectedCurrency)
+
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex`} >
             <div className="w-1/2">
@@ -28,10 +31,11 @@ function InputBox({
                 />
             </div>
             <div className="w-1/2 flex flex-wrap justify-end text-right">
+                <label className="text-black/40 mb-12 inline-block ">Currency Type</label>
                 <select
                     name="" id=""
                     className="rounded-lg px-1 py-1 bg-gray-100 cursor-pointer outline-none"
-                    value={selectedCurrency}
+                    value={selectedCurrency.toUpperCase()}
                     onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
                     disabled={currencyDisable}
                 >
