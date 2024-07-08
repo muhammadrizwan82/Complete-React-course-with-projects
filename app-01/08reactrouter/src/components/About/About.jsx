@@ -1,4 +1,7 @@
+import usePageTitle from "../../hooks/usePageTitle";
+
 export default function About() {
+    usePageTitle('Home - About')
     return (
         <div className="py-16 bg-white">
             <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">

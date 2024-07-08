@@ -5,6 +5,7 @@ import './index.css'
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import { Home, Contact, About, Layout, User } from './components/index.js'
 import Github, { githubInfoLoader } from './components/Github/Github.jsx'
+import Login from './components/Login/Login.jsx'
 
 // const router = createBrowserRouter(
 //   [{
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
         element={<Github />}
         loader={githubInfoLoader}
       />
+      <Route path="/login" element={<Login />} />
     </Route>
   )
 )

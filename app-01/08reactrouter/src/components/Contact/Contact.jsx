@@ -1,4 +1,7 @@
+import usePageTitle from "../../hooks/usePageTitle";
+
 export default function Contact() {
+    usePageTitle('Home - Contact')
     return (
         <div className="relative flex items-top justify-center min-h-[700px] bg-white sm:items-center sm:pt-0">
             <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
@@ -20,8 +23,7 @@ export default function Contact() {
                                     stroke-linejoin="round"
                                     stroke-width="1.5"
                                     viewBox="0 0 24 24"
-                                    className="w-8 h-8 text-gray-500"
-                                >
+                                    className="w-8 h-8 text-gray-500">
                                     <path
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
@@ -36,7 +38,7 @@ export default function Contact() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    Acme Inc, Street, State, Postal Code
+                                    Rahat Commercial DHA Phase 06, Karachi, Pakistan
                                 </div>
                             </div>
 
@@ -48,8 +50,7 @@ export default function Contact() {
                                     stroke-linejoin="round"
                                     stroke-width="1.5"
                                     viewBox="0 0 24 24"
-                                    className="w-8 h-8 text-gray-500"
-                                >
+                                    className="w-8 h-8 text-gray-500">
                                     <path
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
@@ -58,7 +59,7 @@ export default function Contact() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    +44 1234567890
+                                    +92 322-2999643
                                 </div>
                             </div>
 
@@ -70,8 +71,7 @@ export default function Contact() {
                                     stroke-linejoin="round"
                                     stroke-width="1.5"
                                     viewBox="0 0 24 24"
-                                    className="w-8 h-8 text-gray-500"
-                                >
+                                    className="w-8 h-8 text-gray-500">
                                     <path
                                         stroke-linecap="round"
                                         stroke-linejoin="round"
@@ -80,7 +80,7 @@ export default function Contact() {
                                     />
                                 </svg>
                                 <div className="ml-4 text-md tracking-wide font-semibold w-40">
-                                    info@acme.org
+                                    dua2004@gmail.com
                                 </div>
                             </div>
                         </div>
@@ -124,11 +124,9 @@ export default function Contact() {
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
                                 />
                             </div>
-
                             <button
                                 type="submit"
-                                className="md:w-32 bg-orange-700 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-orange-600 transition ease-in-out duration-300"
-                            >
+                                className="md:w-32 bg-orange-700 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-orange-600 transition ease-in-out duration-300">
                                 Submit
                             </button>
                         </form>

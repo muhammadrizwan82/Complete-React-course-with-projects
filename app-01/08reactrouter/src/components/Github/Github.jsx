@@ -1,11 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react'
 import { useLoaderData } from 'react-router-dom';
+import usePageTitle from '../../hooks/usePageTitle';
 
 function Github() {
     //const [data, setData] = useState(null);
     const [error, setError] = useState(null);
     const hasFetched = useRef(false);
     const data = useLoaderData()
+    usePageTitle('Home - Github')
     // useEffect(() => {
     //     if (!hasFetched.current) {
     //         hasFetched.current = true;
@@ -30,11 +32,16 @@ function Github() {
     return (
         <div className='text-center m-4 bg-gray-600 text-white p-4 text-3xl'>
             {error ? (
-                <div>Error fetching data: {data ? '' : 'Error loading'}</div>
+                <div className="flex justify-center items-center h-full">Error fetching data: {data ? '' : 'Error loading'}</div>
             ) : (
                 <div>
-                    <img src={data ? data.avatar_url : ''} alt="" />
-                    Github Followers: {data ? data.followers : 'Loading...'}</div>
+                    <div className="flex justify-left items-left flex-col">
+                        <span><img src={data ? data.avatar_url : ''} alt="" /></span>
+                    </div>
+                    <div className="flex justify-center items-center h-full">
+                        <span>Github Followers: {data ? data.followers : 'Loading...'}</span>
+                    </div>
+                </div>
             )}
         </div>
     )
